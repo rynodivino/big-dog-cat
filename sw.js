@@ -27,26 +27,30 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c078eaca7a22a383895c.js"
+    "url": "webpack-runtime-9abaa5b00ede4cc70130.js"
   },
   {
-    "url": "commons-a9243f29ac15e2467b0c.js"
+    "url": "commons-912b696ff0f59d9a5f8c.js"
   },
   {
-    "url": "styles.5f81339daa9828444137.css"
+    "url": "styles.cc3e60e9a64c4a4b87a3.css"
   },
   {
-    "url": "styles-f210cff5243f0ea800e6.js"
+    "url": "styles-db46c737aea6802e4544.js"
   },
   {
-    "url": "app-a3954cd5c7614fc27fd1.js"
+    "url": "app-acc37d2097a20e0a73f4.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-8b758058592d16d0eac9.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "23b1d77b75cb9d2744f5a30368d5327e"
+    "revision": "380e82ca52a429edd85d319583c8337f"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "f4a4c9518a1d3e30b13a62d4cde13525"
   },
   {
     "url": "manifest.webmanifest",
@@ -73,12 +77,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   }
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/big-dog-cat`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-a3954cd5c7614fc27fd1.js`))) {
+  if (!resources || !(await caches.match(`/big-dog-cat/app-acc37d2097a20e0a73f4.js`))) {
     return await fetch(event.request)
   }
 
@@ -91,7 +95,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/big-dog-cat/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
