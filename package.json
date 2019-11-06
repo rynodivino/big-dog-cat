@@ -40,7 +40,10 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "gh-pages": "^2.1.1",
+=======
+>>>>>>> Initial commit from gatsby: (https://github.com/tinacms/gatsby-starter-tinacms.git)
     "prettier": "^1.18.2"
   },
   "homepage": "https://github.com/tinacms/gatsby-starter-tinacms#readme",
@@ -55,7 +58,10 @@
   },
   "scripts": {
     "build": "gatsby build",
+<<<<<<< HEAD
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+=======
+>>>>>>> Initial commit from gatsby: (https://github.com/tinacms/gatsby-starter-tinacms.git)
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",

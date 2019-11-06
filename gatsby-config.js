@@ -1,5 +1,8 @@
 module.exports = {
+<<<<<<< HEAD
   pathPrefix: "/toast",
+=======
+>>>>>>> Initial commit from gatsby: (https://github.com/tinacms/gatsby-starter-tinacms.git)
   siteMetadata: {
     title: `Gatsby Starter Blog`,
     author: `Kyle Mathews`,
